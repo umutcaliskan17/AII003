@@ -1,10 +1,5 @@
 class Student:
-    """
-    A class representing a university student, mapped directly from the Student UML Class Diagram.
-    """
-
     def __init__(self, student_id: str, full_name: str, department: str, semester: int):
-        # Private Attributes (-) matching the UML Class Diagram
         self.__student_id = student_id
         self.__full_name = full_name
         self.__department = department
@@ -12,7 +7,6 @@ class Student:
         self.__gpa = 0.0
         self.__enrolled_courses = []
 
-    # Public Methods (+) matching the UML Class Diagram
     def register_course(self, course_code: str) -> None:
         if course_code not in self.__enrolled_courses:
             self.__enrolled_courses.append(course_code)
@@ -54,19 +48,14 @@ class Student:
         print("==========================================\n")
 
 
-# Testing the Student class implementation
 if __name__ == "__main__":
-    # Creating a Student object
     student1 = Student("20231604", "Umut Caliskan", "Information System Engineering", 7)
 
-    # Testing methods
     student1.register_course("AII003 - Software Engineering")
     student1.register_course("ISE401 - System Analysis")
     student1.update_gpa(3.55)
     
-    # Displaying profile
     student1.get_student_profile()
     
-    # Dropping a course and checking again
     student1.drop_course("ISE401 - System Analysis")
     student1.get_student_profile()
