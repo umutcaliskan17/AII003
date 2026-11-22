@@ -1,7 +1,3 @@
-# AII003
-AII003 Student class diagram 
-
-
 # AII003 - Software Engineering Assignment
 **Student Name:** Umut Çalışkan  
 **Student ID:** 20231604  
